@@ -18,4 +18,3 @@ class sudokuBoard:
         for i in self.board:
             print(i)
 
-
