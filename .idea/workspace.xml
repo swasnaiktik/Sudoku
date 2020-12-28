@@ -19,14 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="296fb71a-f832-4375-919a-725a0a055827" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Sudoko.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Sudoko.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="296fb71a-f832-4375-919a-725a0a055827" name="Default Changelist" comment="flask server created">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/gui.css" beforeDir="false" afterPath="$PROJECT_DIR$/Solver/templates/GUI/gui.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/gui.html" beforeDir="false" afterPath="$PROJECT_DIR$/Solver/templates/GUI/gui.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/gui.js" beforeDir="false" afterPath="$PROJECT_DIR$/Solver/templates/GUI/gui.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Solver/solver.py" beforeDir="false" afterPath="$PROJECT_DIR$/Solver/solver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Solver/templates/GUI/gui.js" beforeDir="false" afterPath="$PROJECT_DIR$/Solver/templates/GUI/gui.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sudoku/sudoku.py" beforeDir="false" afterPath="$PROJECT_DIR$/sudoku/sudoku.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -108,6 +105,14 @@
       <option name="presentableId" value="Default" />
       <updated>1592717246244</updated>
     </task>
+    <task id="LOCAL-00001" summary="flask server created">
+      <created>1609163513055</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1609163513055</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,28 +128,34 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="flask server created" />
+    <option name="LAST_COMMIT_MESSAGE" value="flask server created" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="310" y="0" key="CommitChangelistDialog2" timestamp="1609165394042">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="310" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1609165394042" />
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1609095988426">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1609095988426" />
-    <state width="1345" height="570" key="GridCell.Tab.0.bottom" timestamp="1609163463149">
+    <state width="1345" height="570" key="GridCell.Tab.0.bottom" timestamp="1609169797188">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="570" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1609163463149" />
-    <state width="1345" height="570" key="GridCell.Tab.0.center" timestamp="1609163463149">
+    <state width="1345" height="570" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1609169797188" />
+    <state width="1345" height="570" key="GridCell.Tab.0.center" timestamp="1609169797188">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="570" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1609163463149" />
-    <state width="1345" height="570" key="GridCell.Tab.0.left" timestamp="1609163463149">
+    <state width="1345" height="570" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1609169797188" />
+    <state width="1345" height="570" key="GridCell.Tab.0.left" timestamp="1609169797188">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="570" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1609163463149" />
-    <state width="1345" height="570" key="GridCell.Tab.0.right" timestamp="1609163463149">
+    <state width="1345" height="570" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1609169797188" />
+    <state width="1345" height="570" key="GridCell.Tab.0.right" timestamp="1609169797188">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="570" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1609163463149" />
+    <state width="1345" height="570" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1609169797188" />
     <state width="1345" height="223" key="GridCell.Tab.1.bottom" timestamp="1609068881533">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -161,5 +172,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1345" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1609068881533" />
+    <state x="288" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1609169784783">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="288" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1366.728@0.0.1366.728" timestamp="1609169784783" />
   </component>
 </project>

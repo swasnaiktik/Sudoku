@@ -1,3 +1,4 @@
+from sudoku.PositionValue import PositionValue
 
 
 class sudokuBoard:
@@ -22,6 +23,17 @@ class sudokuBoard:
     def printBoard(self):
         for i in self.board:
             print(i)
+
+    def makeBoard(self, matrix):
+        indexI = 0
+        for i in matrix:
+            indexJ = 0
+            for j in i:
+                if j != '':
+                    num = PositionValue((indexI, indexJ), int(j))
+                    self.addValues(num)
+                indexJ += 1
+            indexI += 1
 
     def __rowCheck(self, rowNum, num):
         return num not in self.board[rowNum]
@@ -87,13 +99,20 @@ class sudokuBoard:
                 else:
                     ret = self.__backTrackPosition(row, column)
                     if ret is None:
-                        print("Someting wrong with the sudoku")
-                        return
+                        return 1
                     preRow, preColumn = ret
                     while (preRow, preColumn) in self.values:
-                        preRow, preColumn = self.__backTrackPosition(preRow, preColumn)
+                        ret = self.__backTrackPosition(preRow, preColumn)
+                        if ret is None:
+                            return 1
+                        preRow, preColumn = ret
                     start = self.board[preRow][preColumn]
                     self.board[preRow][preColumn] = 0
                     row = preRow
                     column = preColumn
                     start = start + 1
+
+        return 0
+
+    def __str__(self):
+        return str(self.board)

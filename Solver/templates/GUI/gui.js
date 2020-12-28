@@ -1,17 +1,38 @@
-
+function makeHTML(text){
+    dataP = JSON.parse(text)
+    correct =  dataP.correct
+    data = dataP.data
+    if(correct == '1'){
+        return "Sorry wrong matrix inputted"
+    }
+    returnHTML = '<table id = "result">'
+    for(i = 0; i < 9; i++){
+        row = '<tr>'
+        for(j = 0; j < 9; j++){
+            row+=('<td>'+JSON.stringify(data[i][j])+'</td>')
+        }
+        row+='</tr>'
+        returnHTML+=row
+    }
+    returnHTML+='</table>'
+    return returnHTML
+}
 
 function clickSolve(){
      returnMatrix = getSudokuData()
-     returnMatrix = JSON.stringify(returnMatrix)
      fetch('/solveSudoku', {
         headers: {
           'Content-Type': 'application/json'
         },
-        method: 'POST', body:returnMatrix
+        method: 'POST',
+        body: JSON.stringify({
+        "data": returnMatrix})
     }).then(function (response) {
         return response.text();
         }).then(function (text) {
-        console.log(text)
+        insertHTML = makeHTML(text)
+        if(insertHTML == )
+        document.getElementById('solved').innerHTML = insertHTML
     });
 }
 

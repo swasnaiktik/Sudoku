@@ -2,9 +2,8 @@ import sys
 
 sys.path.append(".")
 from sudoku.sudoku import sudokuBoard
-from sudoku.PositionValue import PositionValue
 from flask import *
-
+import json
 app = Flask(__name__)
 
 
@@ -26,9 +25,11 @@ def js():
 @app.route('/solveSudoku', methods=['GET', 'POST'])
 def solveSudoku():
     if request.method == 'POST':
-        print(request.get_json())
-        return 'OK'
-
+        matrix = request.get_json()
+        board = sudokuBoard()
+        board.makeBoard(matrix['data'])
+        correct = board.solve()
+        return json.dumps({'data': board.board, 'correct': correct})
 
 
 if __name__ == "__main__":
