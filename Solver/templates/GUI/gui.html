@@ -2,13 +2,16 @@
     <head>
         <script src="/js"></script>
         <link rel="stylesheet" href="/css">
+        <title>Sudoku Solver</title>
     </head>
     <body>
         <center>
             <h1>Sudoku Solver</h1>
         </center>
-        <table border="1px">
-            <tr>
+        <div class="container">
+            <div class="containerTable">
+            <table border="1px">
+                <tr>
                 <td><input type="number" min="1" max="9" id = '1'></td>
                 <td><input type="number" min="1" max="9" id = '2'></td>
                 <td><input type="number" min="1" max="9" id = '3'></td>
@@ -19,7 +22,7 @@
                 <td><input type="number" min="1" max="9" id = '8'></td>
                 <td><input type="number" min="1" max="9" id = '9'></td>
             </tr>
-            <tr>
+                <tr>
                 <td><input type="number" min="1" max="9" id = 'a1'></td>
                 <td><input type="number" min="1" max="9" id = 'a2'></td>
                 <td><input type="number" min="1" max="9" id = 'a3'></td>
@@ -30,7 +33,7 @@
                 <td><input type="number" min="1" max="9" id = 'a8'></td>
                 <td><input type="number" min="1" max="9" id = 'a9'></td>
             </tr>
-            <tr>
+                <tr>
                 <td><input type="number" min="1" max="9" id = 'b1'></td>
                 <td><input type="number" min="1" max="9" id = 'b2'></td>
                 <td><input type="number" min="1" max="9" id = 'b3'></td>
@@ -41,7 +44,7 @@
                 <td><input type="number" min="1" max="9" id = 'b8'></td>
                 <td><input type="number" min="1" max="9" id = 'b9'></td>
             </tr>
-            <tr>
+                <tr>
                 <td><input type="number" min="1" max="9" id = 'c1'></td>
                 <td><input type="number" min="1" max="9" id = 'c2'></td>
                 <td><input type="number" min="1" max="9" id = 'c3'></td>
@@ -52,7 +55,7 @@
                 <td><input type="number" min="1" max="9" id = 'c8'></td>
                 <td><input type="number" min="1" max="9" id = 'c9'></td>
             </tr>
-            <tr>
+                <tr>
                 <td><input type="number" min="1" max="9" id = 'd1'></td>
                 <td><input type="number" min="1" max="9" id = 'd2'></td>
                 <td><input type="number" min="1" max="9" id = 'd3'></td>
@@ -63,7 +66,7 @@
                 <td><input type="number" min="1" max="9" id = 'd8'></td>
                 <td><input type="number" min="1" max="9" id = 'd9'></td>
             </tr>
-            <tr>
+                <tr>
                 <td><input type="number" min="1" max="9" id = 'e1'></td>
                 <td><input type="number" min="1" max="9" id = 'e2'></td>
                 <td><input type="number" min="1" max="9" id = 'e3'></td>
@@ -74,7 +77,7 @@
                 <td><input type="number" min="1" max="9" id = 'e8'></td>
                 <td><input type="number" min="1" max="9" id = 'e9'></td>
             </tr>
-            <tr>
+                <tr>
                 <td><input type="number" min="1" max="9" id = 'f1'></td>
                 <td><input type="number" min="1" max="9" id = 'f2'></td>
                 <td><input type="number" min="1" max="9" id = 'f3'></td>
@@ -85,7 +88,7 @@
                 <td><input type="number" min="1" max="9" id = 'f8'></td>
                 <td><input type="number" min="1" max="9" id = 'f9'></td>
             </tr>
-            <tr>
+                <tr>
                 <td><input type="number" min="1" max="9" id = 'g1'></td>
                 <td><input type="number" min="1" max="9" id = 'g2'></td>
                 <td><input type="number" min="1" max="9" id = 'g3'></td>
@@ -96,7 +99,7 @@
                 <td><input type="number" min="1" max="9" id = 'g8'></td>
                 <td><input type="number" min="1" max="9" id = 'g9'></td>
             </tr>
-            <tr>
+                <tr>
                 <td><input type="number" min="1" max="9" id = 'h1'></td>
                 <td><input type="number" min="1" max="9" id = 'h2'></td>
                 <td><input type="number" min="1" max="9" id = 'h3'></td>
@@ -107,10 +110,116 @@
                 <td><input type="number" min="1" max="9" id = 'h8'></td>
                 <td><input type="number" min="1" max="9" id = 'h9'></td>
             </tr>
-        </table>
-    <button class="button" style="vertical-align:middle" onclick="clickSolve();">
-        <span>Solve </span>
-    </button>
-    <div id = "solved"></div>
+            </table>
+            <div id = "solved">
+                <table border="1px">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+            <div class="btn">
+                <button class="button" style="vertical-align:middle" onclick="clickSolve();" id = 'solving'>
+                <span>Solve </span>
+            </button>
+            </div>
+        </div>
     </body>
 </html>

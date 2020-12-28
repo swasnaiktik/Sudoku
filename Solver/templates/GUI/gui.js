@@ -5,7 +5,7 @@ function makeHTML(text){
     if(correct == '1'){
         return "Sorry wrong matrix inputted"
     }
-    returnHTML = '<table id = "result">'
+    returnHTML = '<table id = "result" border = "1px">'
     for(i = 0; i < 9; i++){
         row = '<tr>'
         for(j = 0; j < 9; j++){
@@ -20,6 +20,7 @@ function makeHTML(text){
 
 function clickSolve(){
      returnMatrix = getSudokuData()
+     document.getElementById("solving").disabled = true;
      fetch('/solveSudoku', {
         headers: {
           'Content-Type': 'application/json'
@@ -31,8 +32,8 @@ function clickSolve(){
         return response.text();
         }).then(function (text) {
         insertHTML = makeHTML(text)
-        if(insertHTML == )
         document.getElementById('solved').innerHTML = insertHTML
+        document.getElementById("solving").disabled = false;
     });
 }
 
